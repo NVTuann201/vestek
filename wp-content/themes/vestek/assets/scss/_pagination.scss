@@ -1,0 +1,41 @@
+.pagination {
+	margin: 30px 0;
+
+	ul {
+		@include flexbox();
+		@include flex-wrap(wrap);
+
+		li {
+			a {
+				position: relative;
+				display: block;
+				padding: 8px 12px;
+				margin-left: -1px;
+				color: #fff;
+				line-height: 1.25;
+				background-color: #0E3505;
+				border: 1px solid #0E3505;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #FED936;
+					border: 1px solid #FED936;
+				}
+			}
+
+			&.active {
+				a {
+					background-color: #FED936;
+					border-color: #FED936;
+					color: #0E3505;
+
+					&:hover {
+						background-color: #D49D51;
+						border-color: #D49D51;
+						color: #0E3505;
+					}
+				}
+			}
+		}
+	}
+}

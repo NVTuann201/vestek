@@ -1,0 +1,39 @@
+.page-title-wrapper {
+	position: relative;
+	padding-bottom: 4%;
+	z-index: 1;
+
+	&:before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, .66);
+	}
+
+	.page-title-content {
+		padding-top: 20%;
+		@include responsive(1599) {
+			padding-top: 250px;
+		}
+		@include responsive(991) {
+			padding-top: 100px;
+		}
+
+		.page-title {
+			text-align: center;
+			color: #fff;
+			font-weight: 700;
+			font-size: 40px;
+			@include responsive(991) {
+				font-size: 30px;
+			}
+			@include responsive(767) {
+				font-size: 25px;
+			}
+		}
+	}
+}
